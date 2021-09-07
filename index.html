@@ -52,6 +52,9 @@
       top:50%;
       transform: translate(-75px,-50%);  
     }
+    #woman-mobile{
+      display: none;
+    }
     #block{
       position: absolute;
       top:47%;
@@ -94,7 +97,7 @@
       padding-top:10px;
       display: none;
       color: var(--cinza-claro);
-      font-size: 0.9rem;
+      font-size: 0.9em;
     }
     input[name="ac"]:checked~.resposta{
       display: block;
@@ -107,8 +110,58 @@
     }
     .attribution{
       position:relative;
-      top: 35%;
-      
+      top: 10%;
+      text-align: center;
+    }
+    .attribution>p, .attribution a{
+      font-size: 0.9em;
+      text-decoration: none;
+      color: var(--azul-escuro);
+    }
+    .attribution a{
+      color: var(--vermelho-claro);
+    }
+    @media only screen and (max-width: 700px){
+      #card{
+        background-image: url("images/bg-pattern-mobile.svg");
+        background-position: 40px 0px;
+        width: 320px;
+        overflow: visible;
+        flex-wrap: wrap;
+        height: auto;
+      }
+      #block{
+        display: none;
+      }
+      #woman{
+        display: none;
+      }
+      #woman-mobile{
+        display: block;
+        left:50%;
+        transform: translateX(-55%);
+        position:relative;
+        top:-110px;
+      }
+      #ac{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -70px;
+        margin-bottom:20px;
+      }  
+      h1{
+        text-align: center;
+      }  
+      label{
+        font-size:1.1em;
+      }
+      .resposta{
+        padding-right:40px;
+        font-size: 1em;
+      }
+      .attribution{
+      top:3%;
+    }
     }
   </style>
 </head>
@@ -117,6 +170,7 @@
   <div id="card">
     <figure>
       <img id="woman"src="images/illustration-woman-online-desktop.svg" alt="#">
+      <img id="woman-mobile"src="images/illustration-woman-online-mobile.svg" alt="#">
     </figure>
     <div id="ac">
       <h1>FAQ</h1>
@@ -150,8 +204,10 @@
         <div class="resposta">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
       </div>
       <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        <p>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/Daniel-R23">Daniel Rodrigues</a>.
+        </p>
       </div>
     </div>
   </div>
